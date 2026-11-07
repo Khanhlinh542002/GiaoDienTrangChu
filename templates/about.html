@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Logistics A+</title>
+    <!-- Nhập Google Fonts chống lỗi tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           CHÚ THÍCH CÁCH CHỈNH MÀU SẮC VÀ KIỂU CHỮ
+           ========================================== */
+        :root {
+            --primary-blue: #0000B8;  /* <-- [MÀU SẮC] Mã màu xanh dương chủ đạo */
+            --dark-navy: #0A192F;     /* <-- [MÀU SẮC] Màu nền tối cho Header/Footer */
+            --bg-cream: #FFFEE5;      /* <-- [MÀU SẮC] Màu nền kem sáng */
+            --text-color: #333333;    /* <-- [MÀU SẮC] Màu chữ văn bản */
+            --highlight-orange: #FF6B00; /* <-- [MÀU SẮC] Màu nút điểm nhấn */
+            
+            --heading-font: 'Plus Jakarta Sans', sans-serif; /* <-- [KIỂU CHỮ] Font tiêu đề */
+            --body-font: 'Inter', sans-serif;                /* <-- [KIỂU CHỮ] Font nội dung */
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-cream);
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo a {
+            font-family: var(--heading-font);
+            font-size: 24px; /* <-- [CỠ CHỮ] Logo */
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px; /* <-- [CỠ CHỮ] Chữ menu */
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        /* CONTAINER NỘI DUNG CHÍNH */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 6px solid var(--primary-blue);
+        }
+
+        h1, h2 {
+            font-family: var(--heading-font);
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        h1 { font-size: 32px; } /* <-- [CỠ CHỮ] Tiêu đề trang */
+        h2 { font-size: 24px; margin-bottom: 15px; } /* <-- [CỠ CHỮ] Tiêu đề mục nhỏ */
+
+        p {
+            line-height: 1.8;
+            font-size: 16px; /* <-- [CỠ CHỮ] Nội dung đoạn văn */
+            margin-bottom: 15px;
+        }
+
+        /* DANH SÁCH HOẠT ĐỘNG VĂN HÓA */
+        .activity-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .activity-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+        }
+
+        /* NÚT GẮN LINK (BUTTON) */
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            background-color: var(--primary-blue);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px; /* <-- [CỠ CHỮ] Chữ trên nút */
+            transition: background 0.3s ease;
+        }
+
+        .btn-link:hover {
+            background-color: var(--dark-navy);
+        }
+
+        .btn-secondary {
+            background-color: var(--highlight-orange);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e05e00;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><a href="/">Logistics A+</a></div>
+        <nav>
+            <a href="/">Trang chủ</a>
+            <a href="/gioi-thieu">Giới thiệu</a>
+            <a href="https://lms026.wordpress.com/chuong-trinh-dag-tao/" target="_blank">Chương trình đào tạo</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        
+        <!-- 1. GIỚI THIỆU CHUNG VỀ CÔNG TY -->
+        <div class="section-card">
+            <h1>Giới Thiệu Về Công Ty Logistics A+</h1>
+            <p><strong>Công ty Cổ phần Đầu tư và Dịch vụ Kho vận A+ (LA+)</strong> là công ty thành viên đối tác của Ngân hàng TMCP Kỹ thương Việt Nam (Techcombank) – một trong những ngân hàng hàng đầu Việt Nam với năng lực cạnh tranh và uy tín cao trên thị trường tài chính – ngân hàng.</p>
+            <p>LA+ hoạt động chuyên sâu trong lĩnh vực Định giá tài sản và Quản lý tài sản bảo đảm, cung cấp các giải pháp hỗ trợ toàn diện cho hệ thống Techcombank cũng như các tổ chức tín dụng và đối tác khác trên toàn quốc.</p>
+            <p>Với đội ngũ nhân sự chuyên môn cao, môi trường làm việc chuyên nghiệp cùng định hướng phát triển bền vững, LA+ không ngừng nâng cao chất lượng dịch vụ và tối ưu hiệu quả quản trị tài sản cho khách hàng.</p>
+        </div>
+
+        <!-- 2. GIỚI THIỆU SƠ QUẢ VỀ CHƯƠNG TRÌNH ĐÀO TẠO -->
+        <div class="section-card">
+            <h2>Chương Trình Đào Tạo Chuyên Nghiệp</h2>
+            <p>Nhằm nâng cao năng lực chuyên môn và tinh thần <em>"Không ngừng cải tiến"</em>[cite: 3, 4], Logistics A+ xây dựng hệ thống chương trình đào tạo nội bộ bài bản. Các khóa học tập trung vào quy trình vận hành kho thông minh, quản lý rủi ro tài sản bảo đảm và kỹ năng làm việc chuyên nghiệp cho đội ngũ nhân sự[cite: 1, 2].</p>
+            <!-- Link dẫn sang trang web Đào tạo khác -->
+            <a href="https://lms026.wordpress.com/chuong-trinh-dag-tao/" target="_blank" class="btn-link">
+                Xem Chi Tiết Khóa Đào Tạo ➔
+            </a>
+        </div>
+
+        <!-- 3. GIỚI THIỆU SƠ QUẢ VỀ CÁC HOẠT ĐỘNG VĂN HÓA -->
+        <div class="section-card">
+            <h2>Hoạt Động Văn Hóa & Phong Trào Nổi Bật</h2>
+            <p>Bên cạnh mục tiêu phát triển kinh doanh, Logistics A+ chú trọng xây dựng môi trường làm việc trẻ trung, năng động và giàu tính nhân văn:</p>
+            
+            <ul class="activity-list">
+                <li><strong>Giải chạy Marathon:</strong> Rèn luyện ý chí bứt phá và tinh thần bền bỉ cho toàn thể cán bộ nhân viên.</li>
+                <li><strong>Câu lạc bộ Pickleball:</strong> Môn thể thao thời thượng giúp gắn kết đồng đội và tạo năng lượng tích cực sau giờ làm việc.</li>
+                <li><strong>Chương trình Hiến máu tình nguyện:</strong> Hoạt động an sinh xã hội ý nghĩa với thông điệp lan tỏa tình yêu thương đến cộng đồng.</li>
+            </ul>
+
+            <!-- Link dẫn sang trang Hoạt động văn hóa / Sự kiện -->
+            <a href="https://lms026.wordpress.com/" target="_blank" class="btn-link btn-secondary">
+                Khám Phá Văn Hóa LA+ ➔
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Công ty Cổ phần Đầu tư và Dịch vụ Kho vận A+ (LA+). Thành viên thuộc Techcombank.</p>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a> | 
+            <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <p>Địa chỉ: Tòa nhà Techcombank, TP. Hồ Chí Minh | Hotline: 1900 xxxx</p>
+    </footer>
+
+</body>
+</html>

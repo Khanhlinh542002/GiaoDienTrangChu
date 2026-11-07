@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics A+ - Vận Hành Kho Bãi</title>
+    <!-- Nhập Google Fonts chống lỗi tiếng Việt -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           CHÚ THÍCH CÁCH CHỈNH MÀU SẮC VÀ KIỂU CHỮ
+           ========================================== */
+        :root {
+            --primary-blue: #0000B8;  /* <-- [MÀU SẮC] Mã màu xanh dương chủ đạo */
+            --dark-navy: #0A192F;     /* <-- [MÀU SẮC] Màu nền tối cho Header/Footer */
+            --bg-cream: #FFFEE5;      /* <-- [MÀU SẮC] Màu nền kem sáng cho phần thân */
+            --text-color: #333333;    /* <-- [MÀU SẮC] Màu chữ văn bản */
+            
+            --heading-font: 'Plus Jakarta Sans', sans-serif; /* <-- [KIỂU CHỮ] Font tiêu đề */
+            --body-font: 'Inter', sans-serif;                /* <-- [KIỂU CHỮ] Font nội dung */
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-cream); /* Áp dụng nền kem */
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-family: var(--heading-font);
+            font-size: 26px; /* <-- [CỠ CHỮ] Kích thước Logo */
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;  /* <-- [CỠ CHỮ] Kích thước chữ menu */
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #FFD700; /* Màu khi rê chuột vào menu */
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy), var(--primary-blue));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-family: var(--heading-font);
+            font-size: 42px; /* <-- [CỠ CHỮ] Tiêu đề lớn */
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px; /* <-- [CỠ CHỮ] Khẩu hiệu */
+            opacity: 0.9;
+        }
+
+        /* CONTAINER & CARDS */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: var(--heading-font);
+            font-size: 28px; /* <-- [CỠ CHỮ] Tiêu đề mục */
+            color: var(--dark-navy);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .card h3 {
+            font-family: var(--heading-font);
+            font-size: 20px; /* <-- [CỠ CHỮ] Tiêu đề thẻ */
+            color: var(--primary-blue);
+        }
+
+        .card p {
+            font-size: 15px; /* <-- [CỠ CHỮ] Nội dung thẻ */
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark-navy);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 14px; /* <-- [CỠ CHỮ] Chữ ở chân trang */
+        }
+
+        footer .footer-links {
+            margin: 15px 0;
+        }
+
+        footer .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER: Đã cập nhật menu theo yêu cầu -->
+    <header>
+        <div class="logo">{{ company_name }} Logistics</div>
+        <nav>
+            <a href="/">Trang chủ</a>
+            <a href="/gioi-thieu">Giới thiệu</a> <!-- Click vào nhảy ra trang giới thiệu riêng -->
+            <a href="https://logisticsa.edubit.vn/admin/report" target="_blank">Chương trình đào tạo</a> <!-- Link dẫn sang web khác -->
+        </nav>
+    </header>
+
+    <!-- BODY -->
+    <section class="hero">
+        <h1>{{ company_name }} Vận Hành Kho Bãi Thông Minh</h1>
+        <p>{{ tagline }}</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Giá Trị Cốt Lõi & Hoạt Động</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>Tầm nhìn & Sứ mệnh</h3>
+                <p>Tiên phong cung cấp giải pháp vận hành kho bãi hiện đại, tối ưu hóa chuỗi cung ứng với tiêu chuẩn chất lượng cao nhất cho doanh nghiệp.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Vận Hành Kho Bãi</h3>
+                <p>Hệ thống quản lý thông minh, tự động hóa quy trình xuất nhập hàng, đảm bảo an toàn tuyệt đối cho tài sản và hàng hóa.</p>
+            </div>
+
+            <div class="card">
+                <h3>Văn Hóa Năng Động</h3>
+                <p>Xây dựng môi trường làm việc gắn kết thông qua các hoạt động thể thao nội bộ (Pickleball, chạy bộ) và chương trình hiến máu nhân đạo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Công ty Cổ phần Đầu tư và Dịch vụ Kho vận A+ (LA+). Thành viên thuộc Techcombank.</p>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a> | 
+            <a href="#">Điều khoản sử dụng</a>
+        </div>
+        <p>Địa chỉ: Tòa nhà Techcombank, TP. Hồ Chí Minh | Hotline: 1900 xxxx</p>
+    </footer>
+
+</body>
+</html>
